@@ -54,7 +54,7 @@
     },
     {
       "group": "Личный кабинет",
-      "pages": ["lk/overview"]
+      "pages": ["lk/overview", "lk/dataset"]
     },
     {
       "group": "Основы",
