@@ -1,33 +1,26 @@
 ---
-title: "Вступление"
-description: "Описание и примеры использования API"
+title: "Основные сведения"
+description: "Описание и примеры использования Wikibot REST API"
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Основы
 
-## Welcome
+Базовый URL: https://api.tomleto.pro/.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+Взаимодействие с API осуществляется при помощи HTTP POST и HTTP GET запросов. Убедитесь что POST запрос содержит заголовок Content-Type: application/json.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+## Асинхронный режим
 
-## Authentication
+Поддерживаются синхронный и асинхронный механизмы ответа. Все запросы являются синхронными по умолчанию. Для перехода на асинхронный механизм необходимо задать webhook URL.
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Синхронные запросы возвращают ответ, либо ошибку в контексте текущего HTTP-запроса.
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+Асинхронные запросы сразу же возвращают пустой HTTP 200 ответ и вызывают webhook URL с результатами выполнения запроса.
+
+## Авторизация
+
+Все запросы должны содержать заголовок Authorization
+
+```
+Authorization: my_api_key
 ```
