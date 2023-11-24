@@ -14,10 +14,10 @@
     }
   ],
   "paths": {
-    "/bot/set-webhook-url": {
+    "/set-webhook-url": {
       "post": {
         "requestBody": {
-          "description": "Задает webhook URL для бота",
+          "description": "Задать webhook URL для бота",
           "content": {
             "application/json": {
               "schema": {
@@ -29,17 +29,7 @@
         },
         "responses": {
           "200": {
-            "description": "Plant response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plant"
-                  }
-                }
-              }
-            }
+            "description": "Create webhook url response"
           },
           "400": {
             "description": "Unexpected error",
@@ -54,7 +44,7 @@
         }
       }
     },
-    "/bot/ask": {
+    "/ask": {
       "get": {
         "description": "Запрос возвращает синхронный ответ, либо вызывает webhook URL в зависимости от способа взаимодействия.",
         "parameters": [
@@ -100,14 +90,30 @@
         }
       }
     },
-    "bot/kb": {
+    "/kb": {
       "get": {
-        "description": "Запросить информацию по базе знаний"
+        "description": "Запросить информацию по базе знаний",
+        "responses": {
+          "200": {
+            "description": "response"
+          },
+          "400": {
+            "description": "eror"
+          }
+        }
       }
     },
-    "bot/kb/create": {
+    "/kb-create": {
       "post": {
-        "description": "Создать базу знаний"
+        "description": "Создать базу знаний",
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "fail"
+          }
+        }
       }
     }
   },

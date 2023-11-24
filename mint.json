@@ -86,9 +86,9 @@
     {
       "group": "Примеры вызовов",
       "pages": [
-        "api-reference/endpoint/ask",
-        "api-reference/endpoint/set-webhook",
-        "api-reference/endpoint/create-kb",
+        "api-reference/endpoint/get-ask",
+        "api-reference/endpoint/post-set-webhook-url",
+        "api-reference/endpoint/post-kb-create",
         "api-reference/endpoint/get-kb"
       ]
     }
@@ -104,6 +104,7 @@
     "baseUrl": "https://api.tomleto.pro",
     "auth": { "method": "key", "name": "Authorization" }
   },
+  "openapi": ["/api-reference/openapi.json"],
   "analytics": {
     "posthog": {
       "apiKey": "phc_7ANafVFzqZJ4hfVugxYkW2JexZC6kC7kQfT7hfnYoSm"
