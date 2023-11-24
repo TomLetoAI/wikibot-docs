@@ -10,29 +10,23 @@
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
-    }
-  ],
-  "security": [
-    {
-      "bearerAuth": []
+      "url": "https://api.tomleto.pro/api"
     }
   ],
   "paths": {
-    "/plants": {
-      "get": {
-        "description": "Returns all plants from the system that the user has access to",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+    "/bot/set-webhook-url": {
+      "post": {
+        "requestBody": {
+          "description": "Задает webhook URL для бота",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Webhook"
+              }
             }
-          }
-        ],
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "Plant response",
@@ -58,33 +52,43 @@
             }
           }
         }
-      },
-      "post": {
-        "description": "Creates a new plant in the store",
-        "requestBody": {
-          "description": "Plant to add to the store",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
+      }
+    },
+    "/bot/ask": {
+      "get": {
+        "description": "Запрос возвращает синхронный ответ, либо вызывает webhook URL в зависимости от способа взаимодействия.",
+        "parameters": [
+          {
+            "name": "chatId",
+            "in": "query",
+            "description": "Внешний идентификатор чата с клиентом",
+            "schema": {
+              "type": "string"
             }
           },
-          "required": true
-        },
+          {
+            "name": "query",
+            "in": "query",
+            "description": "Запрос",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "plant response",
+            "description": "Ask query response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Plant"
+                  "type": "object",
+                  "$ref": "#/components/schemas/Answer"
                 }
               }
             }
           },
           "400": {
-            "description": "unexpected error",
+            "description": "Unexpected error",
             "content": {
               "application/json": {
                 "schema": {
@@ -96,73 +100,50 @@
         }
       }
     },
-    "/plants/{id}": {
-      "delete": {
-        "description": "Deletes a single plant based on the ID supplied",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "ID of plant to delete",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Plant deleted",
-            "content": {}
-          },
-          "400": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
+    "bot/kb": {
+      "get": {
+        "description": "Запросить информацию по базе знаний"
+      }
+    },
+    "bot/kb/create": {
+      "post": {
+        "description": "Создать базу знаний"
       }
     }
   },
   "components": {
     "schemas": {
-      "Plant": {
-        "required": ["name"],
+      "Webhook": {
+        "required": ["url"],
         "type": "object",
         "properties": {
-          "name": {
-            "description": "The name of the plant",
-            "type": "string"
-          },
-          "tag": {
-            "description": "Tag to specify the type",
+          "url": {
+            "description": "Адрес вебхука",
             "type": "string"
           }
         }
       },
-      "NewPlant": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Plant"
+      "Answer": {
+        "required": ["answer", "botId", "chatId", "type"],
+        "type": "object",
+        "properties": {
+          "answer": {
+            "description": "Ответ на вопрос",
+            "type": "string"
           },
-          {
-            "required": ["id"],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
-              }
-            }
+          "botId": {
+            "description": "Идентификатор бота",
+            "type": "string"
+          },
+          "chatId": {
+            "description": "Идентификатор бота",
+            "type": "string"
+          },
+          "type": {
+            "description": "Тип ответа",
+            "type": "string"
           }
-        ]
+        }
       },
       "Error": {
         "required": ["error", "message"],

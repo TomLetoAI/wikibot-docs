@@ -86,9 +86,10 @@
     {
       "group": "Примеры вызовов",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/ask",
+        "api-reference/endpoint/set-webhook",
+        "api-reference/endpoint/create-kb",
+        "api-reference/endpoint/get-kb"
       ]
     }
   ],
