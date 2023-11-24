@@ -49,21 +49,34 @@
   ],
   "navigation": [
     {
-      "group": "Быстрые ссылки",
-      "pages": ["introduction", "quickstart", "development"]
+      "group": "Основы",
+      "pages": ["introduction", "spreadsheet", "telegram"]
     },
     {
       "group": "Личный кабинет",
-      "pages": ["lk/overview", "lk/dataset"]
+      "pages": [
+        "lk/bot-list",
+        "lk/overview",
+        "lk/chat",
+        "lk/dataset",
+        "lk/l1",
+        "lk/integrations",
+        "lk/reports",
+        "lk/api-keys",
+        "lk/teams",
+        "lk/settings",
+        "lk/danger-zone"
+      ]
     },
     {
-      "group": "Основы",
+      "group": "Интеграции",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation"
+        "integrations/usedesk",
+        "integrations/carrot-quest",
+        "integrations/talk-me",
+        "integrations/verbox",
+        "integrations/jivo",
+        "integrations/bitrix24"
       ]
     },
     {

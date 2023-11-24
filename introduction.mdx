@@ -1,71 +1,65 @@
 ---
-title: Начало
-description: "Добро пожаловать в документацию Wikibot"
+title: Как это работает
+description: Описание и основные принципы работы Wikibot
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.svg"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.svg"
-  alt="Hero Dark"
-/>
+<img className="block" src="/images/poster.jpg" alt="wikibot scheme" />
 
-## Setting up
+## Создание бота
 
-The first step to world-class documentation is setting up your editing environnments.
+<Steps>
+  <Step title="База знаний">
+    Вы даете ссылку на базу знаний или документацию по продукту.
+  </Step>
+  <Step title="Обработка данных">
+    WikiBot индексирует вашу документацию или сайт по продукту и затем отвечает
+    на вопросы пользователей как человек. Под капотом ChatGPT или другая большая
+    языковая модель.
+  </Step>
+  <Step title="Использование бота">
+    Вы выбираете через какой интерфейс WikiBot будет общаться с пользователем.
+    Сейчас доступны Telegram, Jivo, Carrot quest, Юздеск, Bitrix24, Talk-me,
+    почта, API.
+  </Step>
+</Steps>
+
+Когда пользователь задает вопрос, сначала с помощью семантического поиска в базе знаний находятся документы наиболее подходящие по смыслу, затем из найденных документов с помощью LLM формируется ответ.
+
+## Быстрый старт
+
+Воспользуйтесь популярными решениями по интеграции и использованию Wikibot.
+
+Несмотря на то, что данные решения очень простые и вы сможете быстро оценить работу бота и качество ответов, реальные сценарии использования гораздо глубже и мы настоятельно рекомендуем ознакомиться с документацией и воспользоваться интеграциями и настройками на портале.
 
 <CardGroup cols={2}>
   <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
+    title="Создание бота из Google Spreadsheet"
+    icon="table"
+    href="spreadsheet"
   >
     Get your docs set up locally for easy development
   </Card>
   <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
+    title="Создание собственного бота в Telegram"
+    icon="telegram"
+    href="telegram"
   >
     Preview your changes before you push to make sure they're perfect
   </Card>
 </CardGroup>
 
-## Make it yours
+## Продвинутые сценарии использования
 
-Update your docs to your brand and add valuable content for the best user conversion.
+Настройте бота под ваши нужды и фирменный стиль, включая сценарии коммуникации, либо интегрируйте в ваш хелпдеск или платформу коммуникации с клиентами.
 
 <CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
+  <Card title="Кастомизация" icon="palette" href="lk/settings">
+    Настройте шаблоны сообщений, рабочие часы и приветственное сообщение.
   </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
+  <Card title="Интеграции" icon="screwdriver-wrench" href="lk/integrations">
+    Настройте интеграции с популярными хелпдесками и платформами.
   </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/components/accordion"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/showcase"
-  >
-    Check out our showcase of our favorite documentation
+  <Card title="Доступ через API" icon="code" href="lk/api-keys">
+    Сгенерируйте API-ключ и вызывайе Wikibot в соответствии с вашими сценариями.
   </Card>
 </CardGroup>
