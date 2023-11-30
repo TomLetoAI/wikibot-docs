@@ -50,7 +50,7 @@
   "navigation": [
     {
       "group": "Основы",
-      "pages": ["introduction", "spreadsheet", "telegram"]
+      "pages": ["introduction", "sheet", "telegram"]
     },
     {
       "group": "Личный кабинет",
