@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Wikibot",
+  "name": "Документация Wikibot",
   "logo": {
     "dark": "/logo/logo.svg",
     "light": "/logo/logo.svg"
@@ -63,7 +63,7 @@
         "lk/integrations",
         "lk/reports",
         "lk/api-keys",
-        "lk/teams",
+        "lk/team",
         "lk/settings",
         "lk/danger-zone"
       ]
