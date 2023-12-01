@@ -75,8 +75,8 @@
         "integrations/carrot-quest",
         "integrations/talk-me",
         "integrations/verbox",
-        "integrations/jivo",
-        "integrations/bitrix24"
+        "integrations/bitrix24",
+        "integrations/jivo"
       ]
     },
     {
