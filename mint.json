@@ -2,14 +2,18 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Документация Wikibot",
   "logo": {
-    "dark": "/logo/logo.svg",
-    "light": "/logo/logo.svg"
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#1faee9",
     "light": "#1faee9",
-    "dark": "#1faee9"
+    "dark": "#1faee9",
+    "background": {
+      "dark": "#1d1d1d",
+      "light": "#ffffff"
+    }
   },
   "topbarLinks": [
     {
