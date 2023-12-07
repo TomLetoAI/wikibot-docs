@@ -53,8 +53,18 @@
   ],
   "navigation": [
     {
-      "group": "Основы",
-      "pages": ["introduction", "sheet", "telegram"]
+      "group": "Начало работы",
+      "pages": [
+        "introduction",
+        "sheet",
+        "telegram"
+      ]
+    },
+    {
+      "group": "Инструкции",
+      "pages": [
+        "guides/bot-doesnt-answer"
+      ]
     },
     {
       "group": "Личный кабинет",
@@ -85,7 +95,9 @@
     },
     {
       "group": "API Документация",
-      "pages": ["api-reference/introduction"]
+      "pages": [
+        "api-reference/introduction"
+      ]
     },
     {
       "group": "Примеры вызовов",
@@ -106,9 +118,14 @@
   },
   "api": {
     "baseUrl": "https://api.tomleto.pro/api/bot",
-    "auth": { "method": "key", "name": "Authorization" }
+    "auth": {
+      "method": "key",
+      "name": "Authorization"
+    }
   },
-  "openapi": ["/api-reference/openapi.json"],
+  "openapi": [
+    "/api-reference/openapi.json"
+  ],
   "analytics": {
     "posthog": {
       "apiKey": "phc_7ANafVFzqZJ4hfVugxYkW2JexZC6kC7kQfT7hfnYoSm"
