@@ -90,7 +90,8 @@
         "integrations/talk-me",
         "integrations/verbox",
         "integrations/bitrix24",
-        "integrations/jivo"
+        "integrations/jivo",
+        "integrations/albato"
       ]
     },
     {
