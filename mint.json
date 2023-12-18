@@ -54,11 +54,18 @@
   "navigation": [
     {
       "group": "Начало работы",
-      "pages": ["introduction", "sheet", "telegram"]
+      "pages": [
+        "quick-start/introduction",
+        "quick-start/sheet",
+        "quick-start/telegram",
+        "quick-start/algo"
+      ]
     },
     {
       "group": "Инструкции",
-      "pages": ["guides/bot-doesnt-answer"]
+      "pages": [
+        "guides/bot-doesnt-answer"
+      ]
     },
     {
       "group": "Личный кабинет",
@@ -90,7 +97,9 @@
     },
     {
       "group": "API Документация",
-      "pages": ["api-reference/introduction"]
+      "pages": [
+        "api-reference/introduction"
+      ]
     },
     {
       "group": "Примеры вызовов",
@@ -116,7 +125,9 @@
       "name": "Authorization"
     }
   },
-  "openapi": ["/api-reference/openapi.json"],
+  "openapi": [
+    "/api-reference/openapi.json"
+  ],
   "analytics": {
     "posthog": {
       "apiKey": "phc_7ANafVFzqZJ4hfVugxYkW2JexZC6kC7kQfT7hfnYoSm"
