@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://api.tomleto.pro/api/bot"
+      "url": "https://api.wikibot.pro/api/bot"
     }
   ],
   "paths": {

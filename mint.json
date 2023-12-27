@@ -18,7 +18,7 @@
   "topbarLinks": [
     {
       "name": "Личный кабинет",
-      "url": "https://app.tomleto.pro"
+      "url": "https://app.wikibot.pro"
     }
   ],
   "topbarCtaButton": {
@@ -63,9 +63,7 @@
     },
     {
       "group": "Инструкции",
-      "pages": [
-        "guides/bot-doesnt-answer"
-      ]
+      "pages": ["guides/bot-doesnt-answer"]
     },
     {
       "group": "Личный кабинет",
@@ -97,9 +95,7 @@
     },
     {
       "group": "API Документация",
-      "pages": [
-        "api-reference/introduction"
-      ]
+      "pages": ["api-reference/introduction"]
     },
     {
       "group": "Примеры вызовов",
@@ -119,15 +115,13 @@
     "telegram": "https://t.me/Wikibot_freinds"
   },
   "api": {
-    "baseUrl": "https://api.tomleto.pro/api/bot",
+    "baseUrl": "https://api.wikibot.pro/api/bot",
     "auth": {
       "method": "key",
       "name": "Authorization"
     }
   },
-  "openapi": [
-    "/api-reference/openapi.json"
-  ],
+  "openapi": ["/api-reference/openapi.json"],
   "analytics": {
     "posthog": {
       "apiKey": "phc_7ANafVFzqZJ4hfVugxYkW2JexZC6kC7kQfT7hfnYoSm"
