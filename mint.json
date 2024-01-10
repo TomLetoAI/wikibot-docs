@@ -90,7 +90,8 @@
         "integrations/verbox",
         "integrations/bitrix24",
         "integrations/jivo",
-        "integrations/albato"
+        "integrations/albato",
+        "integrations/freshchat"
       ]
     },
     {
