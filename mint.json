@@ -41,7 +41,7 @@
     {
       "name": "Telegram",
       "icon": "telegram",
-      "url": "https://t.me/Wikibot_freinds",
+      "url": "https://t.me/wikibot_news",
       "iconType": "brands"
     },
     {
@@ -112,7 +112,7 @@
   },
   "footerSocials": {
     "github": "https://github.com/tomletoai",
-    "telegram": "https://t.me/Wikibot_freinds"
+    "telegram": "https://t.me/wikibot_news"
   },
   "api": {
     "baseUrl": "https://api.wikibot.pro/api/bot",
