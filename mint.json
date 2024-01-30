@@ -63,7 +63,10 @@
     },
     {
       "group": "Инструкции",
-      "pages": ["guides/bot-doesnt-answer"]
+      "pages": [
+        "guides/bot-doesnt-answer",
+        "guides/usedesk-examples"
+      ]
     },
     {
       "group": "Личный кабинет",
