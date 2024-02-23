@@ -94,7 +94,8 @@
         "integrations/bitrix24",
         "integrations/jivo",
         "integrations/albato",
-        "integrations/freshchat"
+        "integrations/freshchat",
+        "integrations/omnidesk"
       ]
     },
     {
