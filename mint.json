@@ -73,15 +73,12 @@
       "pages": [
         "lk/bot-list",
         "lk/overview",
-        "lk/chat",
-        "lk/dataset",
-        "lk/l1",
-        "lk/integrations",
+        "lk/learn",
+        "lk/testing",
+        "lk/connections",
         "lk/reports",
-        "lk/api-keys",
         "lk/team",
-        "lk/settings",
-        "lk/danger-zone"
+        "lk/settings"
       ]
     },
     {
@@ -100,7 +97,9 @@
     },
     {
       "group": "API Документация",
-      "pages": ["api-reference/introduction"]
+      "pages": [
+        "api-reference/introduction"
+      ]
     },
     {
       "group": "Примеры вызовов",
@@ -126,7 +125,9 @@
       "name": "Authorization"
     }
   },
-  "openapi": ["/api-reference/openapi.json"],
+  "openapi": [
+    "/api-reference/openapi.json"
+  ],
   "analytics": {
     "posthog": {
       "apiKey": "phc_7ANafVFzqZJ4hfVugxYkW2JexZC6kC7kQfT7hfnYoSm"
