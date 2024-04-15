@@ -105,6 +105,7 @@
       "group": "Примеры вызовов",
       "pages": [
         "api-reference/endpoint/get-ask",
+        "api-reference/endpoint/get-search",
         "api-reference/endpoint/post-set-webhook-url",
         "api-reference/endpoint/post-kb-create",
         "api-reference/endpoint/get-kb"
