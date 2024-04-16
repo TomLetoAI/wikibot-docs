@@ -90,6 +90,61 @@
         }
       }
     },
+    "/search": {
+      "get": {
+        "description": "Запрос возвращает список наиболее релевантных документов",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Поисковый запрос",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "description": "Взять первые N записей",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "description": "Пропустить первые N записей",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/SearchAnswer"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/kb": {
       "get": {
         "description": "Запросить информацию по базе знаний",
@@ -148,6 +203,36 @@
           "type": {
             "description": "Тип ответа",
             "type": "string"
+          }
+        }
+      },
+      "SearchAnswer": {
+        "required": ["answer", "botId", "chatId", "type"],
+        "type": "object",
+        "properties": {
+          "articles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "link": {
+                  "description": "Ссылка на документ",
+                  "type": "string"
+                },
+                "title": {
+                  "description": "Заголовок",
+                  "type": "string"
+                },
+                "content": {
+                  "description": "Контент",
+                  "type": "string"
+                },
+                "indexedAt": {
+                  "description": "Дата индексации",
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
