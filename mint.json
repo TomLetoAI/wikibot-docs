@@ -94,7 +94,8 @@
         "integrations/jivo",
         "integrations/albato",
         "integrations/freshchat",
-        "integrations/omnidesk"
+        "integrations/omnidesk",
+        "integrations/helpdeskeddy"
       ]
     },
     {
