@@ -57,8 +57,7 @@
       "pages": [
         "quick-start/introduction",
         "quick-start/sheet",
-        "quick-start/telegram",
-        "quick-start/algo"
+        "guides/algo"
       ]
     },
     {
@@ -95,7 +94,8 @@
         "integrations/albato",
         "integrations/freshchat",
         "integrations/omnidesk",
-        "integrations/helpdeskeddy"
+        "integrations/helpdeskeddy",
+        "integrations/telegram"
       ]
     },
     {

@@ -54,12 +54,34 @@
             "description": "Внешний идентификатор чата с клиентом",
             "schema": {
               "type": "string"
-            }
+            },
+            "required": true
           },
           {
             "name": "query",
             "in": "query",
             "description": "Запрос",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "description": "Форматирование ответа: links - добавить ссылки вида (name)[link], raw - неформатированный ответ",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "links",
+                "raw"
+              ]
+            }
+          },
+          {
+            "name": "msgId",
+            "in": "query",
+            "description": "Идентификатор сообщения",
             "schema": {
               "type": "string"
             }
@@ -150,17 +172,36 @@
         "description": "Запросить информацию по базе знаний",
         "responses": {
           "200": {
-            "description": "response"
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/KbUrl"
+                }
+              }
+            }
           },
           "400": {
-            "description": "eror"
+            "description": "error"
           }
         }
       }
     },
     "/kb-create": {
       "post": {
-        "description": "Создать базу знаний",
+        "requestBody": {
+          "description": "Создать базу знаний",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KbUrl"
+              }
+            }
+          },
+          "required": true
+        },
+        "description": "Создать базу знаний1",
         "responses": {
           "200": {
             "description": "success"
@@ -175,7 +216,9 @@
   "components": {
     "schemas": {
       "Webhook": {
-        "required": ["url"],
+        "required": [
+          "url"
+        ],
         "type": "object",
         "properties": {
           "url": {
@@ -184,8 +227,25 @@
           }
         }
       },
+      "KbUrl": {
+        "required": [
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "description": "Адрес источника данных",
+            "type": "string"
+          }
+        }
+      },
       "Answer": {
-        "required": ["answer", "botId", "chatId", "type"],
+        "required": [
+          "answer",
+          "botId",
+          "chatId",
+          "type"
+        ],
         "type": "object",
         "properties": {
           "answer": {
@@ -200,14 +260,33 @@
             "description": "Идентификатор бота",
             "type": "string"
           },
-          "type": {
-            "description": "Тип ответа",
+          "msgId": {
+            "description": "Идентификатор сообщения, переданный в запросе",
             "type": "string"
+          },
+          "type": {
+            "description": "Тип ответа: SUCCESS - успешный ответ, FALLBACK - альтернативная генерация ответа, NO_ANSWER - нет ответа, ERROR - внутренняя ошибка сервера, например таймаут, GREETING - содержит только приветствие, OPERATOR - вызов оператора, SKIP - пропуск сообщения, GRATITUDE - содержит только благодарность",
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "FALLBACK",
+              "NO_ANSWER",
+              "ERROR",
+              "GREETING",
+              "OPERATOR",
+              "SKIP",
+              "GRATITUDE"
+            ]
           }
         }
       },
       "SearchAnswer": {
-        "required": ["answer", "botId", "chatId", "type"],
+        "required": [
+          "answer",
+          "botId",
+          "chatId",
+          "type"
+        ],
         "type": "object",
         "properties": {
           "articles": {
@@ -237,7 +316,10 @@
         }
       },
       "Error": {
-        "required": ["error", "message"],
+        "required": [
+          "error",
+          "message"
+        ],
         "type": "object",
         "properties": {
           "error": {
