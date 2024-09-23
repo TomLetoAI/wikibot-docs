@@ -55,30 +55,19 @@
     {
       "group": "Начало работы",
       "pages": [
-        "quick-start/introduction",
-        "quick-start/sheet",
-        "guides/algo"
+        "quick-start/introduction"
       ]
     },
     {
-      "group": "Инструкции",
+      "group": "Обучение бота",
       "pages": [
-        "guides/bot-doesnt-answer",        
-        "guides/usedesk-examples"
-      ]
-    },
-    {
-      "group": "Личный кабинет",
-      "pages": [
-        "lk/bot-list",
-        "lk/overview",
-        "lk/learn",
-        "lk/testing",
-        "lk/search",
-        "lk/connections",
-        "lk/reports",
-        "lk/team",
-        "lk/settings"
+        "learning/agent",
+        "learning/kb",
+        "learning/first-line",
+        "learning/glossary",
+        "learning/phrases",
+        "learning/learning-by-dialogs",
+        "learning/problems"
       ]
     },
     {
@@ -95,6 +84,20 @@
         "integrations/omnidesk",
         "integrations/helpdeskeddy",
         "integrations/telegram"
+      ]
+    },
+    {
+      "group": "Личный кабинет",
+      "pages": [
+        "lk/bot-list",
+        "lk/overview",
+        "lk/learn",
+        "lk/testing",
+        "lk/search",
+        "lk/connections",
+        "lk/reports",
+        "lk/team",
+        "lk/settings"
       ]
     },
     {
